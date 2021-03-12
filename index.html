@@ -27,16 +27,29 @@
 			</div>
 		</div>
 	</div>
+
+ <!-------------------------- MOBILE MENU --------------------------> 
+ <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a href="#">Our Company</a></li>
+      <li><a href="#">Brands</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Investors</a></li>
+      <li><a href="#"><img src="images/search.png"></a></li>
+      <li><a href="#"><img src="images/world-icon.png"></a></li>
+    </ul>
+  </div>
 <!------------------------------ VIDEO ------------------------------>
     <div class="videoBackground">
         <video class="video" autoplay muted loop src="images/Coca-Cola_Anthem_Nepal.mp4"></video>
     </div>
 </div>
    
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="js/index.js"></script>    
-</body>
-</html>
 
 <!--------------------------- OUR COMPANY --------------------------->
 <section id="ourCompany">
@@ -79,7 +92,8 @@
                 <img src="images/teamwork.png"><h2>31,700+</h2>
             </div>
             <div class="stat-bottom">
-                <h5>global employees in the <br>Coca-Cola system</h5>
+                <h5 class="Textweb">global employees in the<br>Coca-Cola system</h5>
+                <h5 class="Textmobile">global employees in the Coca-Cola system</h5>
             </div>
         </div>
     </div>
@@ -90,3 +104,12 @@
     </div>
 </div>
 </section>
+
+<section id="beverage">
+
+</section>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/index.js"></script>    
+</body>
+</html>
