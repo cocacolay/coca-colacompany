@@ -1,0 +1,191 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+body, html {
+    font-family: 'tccc-unitytextregular', sans-serif;
+    font-size: 16px;
+    color: #333333;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    line-height: 2em;
+}
+
+h1 {
+    font-family:'tccc-unityheadlinebold';
+    font-size: 3.75em;
+}
+
+h2 {
+    font-family: 'tccc-unitycondensedmedium';
+    font-size: 3.5em;
+}
+
+h3 {
+    font-family: 'tccc-unitytextbold';
+    font-size: 1.25em;
+}
+
+h5 {
+    font-family:'tccc-unitytextlight';
+    font-size: 1em;
+}
+
+.red {
+    color: #D22829;
+    font-family: 'tccc-unitytextmedium';
+}
+
+/*--------------- NAVIGATION ---------------*/
+.hero {
+    height: 90vh;
+}
+
+.navbar {
+	width: 100%;
+	overflow: hidden;
+    padding: 30px 0 0 0;
+	height: 5vh;
+	line-height: 40px;
+    z-index: 1;
+    }
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+    }
+
+.logo {
+	float:left;
+    }
+
+    /* this is for ul tag */
+.menu {
+	float: right;
+}
+
+.menu li {
+	float:left;
+	width: fit-content;
+	text-align: center;
+	list-style: none;
+    padding-left: 30px;
+    }
+
+.menu li a {
+	color:white;
+    font-size: 1.25em;
+	text-decoration: none;
+	text-transform: none;
+	display:block;
+    position: relative;
+    }
+
+.menu li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #D22829;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.menu li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.menu li img {
+    max-height: 20px;
+    min-height: 20px;
+}
+
+/*--------------- VIDEO ---------------*/
+
+.videoBackground {
+    overflow: hidden;
+    width: 100%;
+}
+
+.video {
+    z-index: -100;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+	filter: brightness(80%);
+    }
+
+/*--------------- OUR COMPANY ---------------*/
+
+.ourCompany {
+    padding: 20px 15% 50px 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+#ourCompany h3 {
+    padding: 50px 0 0 15%;
+    color: #D22829;
+}
+
+
+.ourCompany-left {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ourCompany-right {
+    width: 50%;
+    margin-left: 50px;
+}
+
+.ourCompany-left > div {
+    display: flex;
+    flex-basis: calc(50% - 40px);
+    flex-direction: column;
+}
+
+.stat-1, .stat-3 {
+    width: 50%;
+
+}
+
+.stat-3, .stat-4 {
+    margin-top: 20px;
+}
+
+.stat-2, .stat-4 {
+    width: 50%;
+    margin-left: 20px;
+
+}
+
+.stat-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #D22829;
+}
+
+.stat-top img {
+    padding: 2px 1vw 0 0;
+    max-width: 55px;
+    max-height: 55px;
+    min-width: 55px;
+    min-height: 55px;
+}
+
+.stat-bottom {
+    margin-top: 1em;
+    line-height: 1.75em;
+}
