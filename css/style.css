@@ -6,7 +6,7 @@
 
 body, html {
     font-family: 'tccc-unitytextregular', sans-serif;
-    font-size: 16px;
+    font-size: calc(15px + 0.055vw);
     color: #333333;
     margin: 0;
     height: 100%;
@@ -29,6 +29,11 @@ h3 {
     font-size: 1.25em;
 }
 
+h4 {
+    font-family: 'tccc-unitytextmedium';
+    font-size: 1.25em;
+}
+
 h5 {
     font-family:'tccc-unitytextlight';
     font-size: 1em;
@@ -39,10 +44,8 @@ h5 {
     font-family: 'tccc-unitytextmedium';
 }
 
+
 /*--------------- NAVIGATION ---------------*/
-.hero {
-    height: 90vh;
-}
 
 .navbar {
 	width: 100%;
@@ -75,16 +78,16 @@ h5 {
     padding-left: 30px;
     }
 
-.menu li a {
+.menu li a, a {
 	color:white;
-    font-size: 1.25em;
+    font-size: 1em;
 	text-decoration: none;
 	text-transform: none;
 	display:block;
     position: relative;
     }
 
-.menu li a:after {
+.menu li a:after, a:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -97,7 +100,7 @@ h5 {
     transition: transform 0.25s ease-out;
 }
 
-.menu li a:hover:after {
+.menu li a:hover:after, a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -106,6 +109,7 @@ h5 {
     max-height: 20px;
     min-height: 20px;
 }
+
 /*--------------- MOBILE MENU ---------------*/
 .hamburger-menu {display: none;}
 
@@ -236,6 +240,10 @@ h5 {
 }
 /*--------------- VIDEO ---------------*/
 
+.hero {
+    height: 90vh;
+}
+
 .videoBackground {
     width: 100%;
     overflow: hidden;
@@ -259,13 +267,13 @@ h5 {
 /*--------------- OUR COMPANY ---------------*/
 
 .ourCompany {
-    padding: 20px 15% 50px 15%;
+    padding: 20px 10% 50px 10%;
     display: flex;
     flex-direction: row;
 }
 
 #ourCompany h3 {
-    padding: 50px 0 0 15%;
+    padding: 5vh 0 0 10%;
     color: #D22829;
 }
 
@@ -332,9 +340,14 @@ h5 {
     }
     .ourCompany-left, .ourCompany-right {
         width: 100%;
-        justify-content: center;
         margin: 1vh 0;
     }
+
+    .stat-2, .stat-4 {
+        margin-left: 30px;
+    }
+
+
     .ourCompany-right {
         margin: 5vh 0;
     }
@@ -344,7 +357,73 @@ h5 {
 /*--------------- BEVERAGE ---------------*/
 #beverage {
     background-image: url("../images/Red-Wave.png");
-    height: calc(300px + 30vw);
+    height: fit-content;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 20vh 10% 0 10%;
+    color: white;
+}
+
+#beverage h1 {
+    float: right;
+    text-align: end;
+    line-height: 10vh;
+}
+
+.beverageSub h4 {
+    margin-top: 23vh;
+}
+
+.beverageSub {
+    width: 50%;
+}
+
+.beverageSub p {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.beverageSub a {
+    margin-top: 20px;
+    width: fit-content;
+    font-family: 'tccc-unitytextmedium';
+}
+
+.beverageSub a:after {
+    background-color: white;
+}
+
+.brands {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-end;
+    margin-bottom: -800px;
+}
+
+.brands img {
+    padding-left: 30px;
+    height: 100%;
+}
+
+.brands img:hover {
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+@media (max-width: 980px) {
+    #beverage h1 {
+        font-size: 3em;
+        line-height: normal;
+        margin-bottom: 50px;
+    }
+    .beverageSub, .beverageSub p {
+        width:100%;
+        margin-top: 20px;
+    }
+
 }
