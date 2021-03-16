@@ -140,7 +140,7 @@ h5 {
   .menu__btn {
     display: flex;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 30px;
     right: 30px;
   
@@ -176,7 +176,7 @@ h5 {
   .menu__box {
     display: block;
     position: fixed;
-    visibility: hidden;
+    visibility: visible;
     top: 0;
     right: -100%;
   
@@ -466,12 +466,41 @@ h5 {
     margin-top: -100px;
 }
 
-#socialresponsiblity {
+#sustainable .content-right img {
+    width: 100%;
+}
+
+@media (max-width: 980px) {
+    .content-sub {
+        width: 80%;
+    }
+
+    #sustainable .content-right {
+        margin-top: 40px;
+    }
+}
+
+/*--------------- SOCIAL RESPONSIBILITY ---------------*/
+
+#s-r {
     background-image: url("../images/socialresponsibility.png");
-    height: calc(300px + 30vh);
+    height: calc(200px + 20vh);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 20vh 10% 10px 10%;
     color: white;
     margin-top: -5vh;
+    overflow: hidden;
+}
+
+.s-r h2, .s-r h5 {
+    float: right;
+    text-align: end;
+    line-height: 10vh;
+    background-color: grey;
+}
+
+.s-r h5 {
+    margin-top: 12vh;
+    margin-bottom: -50px;
 }
