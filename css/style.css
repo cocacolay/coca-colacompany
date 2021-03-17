@@ -3,10 +3,9 @@
 	padding: 0;
 }
 
-
 body, html {
     font-family: 'tccc-unitytextregular', sans-serif;
-    font-size: calc(15px + 0.055vw);
+    font-size: calc(15px + 0.2vw);
     color: #333333;
     margin: 0;
     height: 100%;
@@ -16,27 +15,29 @@ body, html {
 
 h1 {
     font-family:'tccc-unityheadlinebold';
-    font-size: 3.75em;
+    font-size: calc(40px + 0.5vw);
+    line-height: 20px;
 }
 
 h2 {
     font-family: 'tccc-unitycondensedmedium';
-    font-size: 3.5em;
+    font-size: calc(30px + 1vw);
 }
 
 h3 {
-    font-family: 'tccc-unitytextbold';
-    font-size: 1.25em;
+    font-family: 'tccc-unitytextregular';
+    font-size: calc(30px + 0.5vw);
+    line-height: 6.5vh;
 }
 
 h4 {
-    font-family: 'tccc-unitytextmedium';
-    font-size: 1.25em;
+    font-family: 'tccc-unitytextregular';
+    font-size: calc(15px + 0.5vw);
 }
 
 h5 {
-    font-family:'tccc-unitytextlight';
-    font-size: 1em;
+    font-family:'tccc-unitytextmedium';
+    font-size: calc(15px + 0.2vw);
 }
 
 .red {
@@ -55,17 +56,51 @@ h5 {
     z-index: 1;
     }
 
-
 .container {
 	width: 90%;
 	margin: 0 auto;
     }
 
-.logo {
+.logo, .logo-hover {
 	float:left;
     }
 
-    /* this is for ul tag */
+
+.logo_div:hover .logo {
+    display: none;
+}
+
+/*red hover on logo*/
+.logo-hover {
+    display: none;
+    opacity: 0;
+    opacity: 0;
+    animation: animate 400ms ease-in-out;
+}   
+
+
+.logo_div:hover .logo-hover {
+    display: block;
+    opacity: 100%;
+}
+
+@keyframes animate {
+    0% {
+      opacity: 0%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+      opacity: 100%;
+      
+
+    }
+}
+
+/* this is for ul tag */
 .menu {
 	float: right;
 }
@@ -78,7 +113,7 @@ h5 {
     padding-left: 30px;
     }
 
-.menu li a, .link a {
+.menu li a, .link a, .link2 a {
 	color:white;
     font-size: 1em;
 	text-decoration: none;
@@ -100,7 +135,24 @@ h5 {
     transition: transform 0.25s ease-out;
 }
 
-.menu li a:hover:after, .link a:hover:after {
+.link, .link2 {
+    font-family: 'tccc-unitytextmedium';
+}
+
+.link2 a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.menu li a:hover:after, .link a:hover:after, .link2 a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -267,48 +319,25 @@ h5 {
 
 /*--------------- OUR COMPANY ---------------*/
 
-.content {
-    padding: 20px 10% 50px 10%;
+#ourCompany {
+    padding: 10vh 15% 50px 15%;
+}
+
+#ourCompany a {
+    color: black;
+    width: fit-content;
+    margin-top: 2vh;
+}
+
+.content, .content-2 {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    margin-top: 5vh;
+    justify-content: center;
 }
 
-.title h3 {
-    padding: 5vh 0 0 10%;
-    color: #D22829;
-    text-transform: capitalize;
-}
-
-
-.content-left {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.content-right {
-    width: 50%;
-    margin-left: 50px;
-}
-
-.content-left > div {
-    display: flex;
-    flex-basis: calc(50% - 40px);
-    flex-direction: column;
-}
-
-.stat-1, .stat-3 {
-    width: 50%;
-
-}
-
-.stat-3, .stat-4 {
-    margin-top: 20px;
-}
-
-.stat-2, .stat-4 {
-    width: 50%;
-    margin-left: 20px;
+.stat {
+    width: 100%;
 }
 
 .stat-top {
@@ -319,11 +348,15 @@ h5 {
 }
 
 .stat-top img {
-    padding: 2px 1vw 0 0;
-    max-width: 55px;
-    max-height: 55px;
-    min-width: 55px;
-    min-height: 55px;
+    max-width: 120px;
+    max-height: 120px;
+    min-width: 50px;
+    min-height: 50px;
+    margin-right: 20px;
+}
+
+.stat h2, .stat h5 {
+    margin-right: 3vw;
 }
 
 .stat-bottom {
@@ -331,107 +364,95 @@ h5 {
     line-height: 1.75em;
 }
 
-.Textmobile {
-    display: none;
-}
 
 @media (max-width: 980px) {
+    #ourCompany {
+        padding: 5vh 5% 50px 5%;
+    }
     .content {
+        display: flex;
+        margin: 2.5vh 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    .content > div {
+        display: flex;
+        flex-basis: calc(50%);
         flex-direction: column;
     }
-    .content-left, .content-right {
-        width: 100%;
-        margin: 1vh 0;
+    .stat {
+        margin-top: 2vh;
     }
-
-    .stat-2, .stat-4 {
-        margin-left: 30px;
-    }
-
-    .content-right {
-        margin: 5vh 0;
-    }
-    .Textmobile {display:inline-block;}
-    .Textweb {display:none;}
-}
-/*--------------- BEVERAGE ---------------*/
-#beverage {
-    background-image: url("../images/Red-Wave.png");
-    height: fit-content;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20vh 10% 10px 10%;
-    color: white;
-}
-
-#beverage h1 {
-    float: right;
-    text-align: end;
-    line-height: 10vh;
-}
-
-.beverageSub h4 {
-    margin-top: 15vh;
-}
-
-.beverageSub {
-    width: 50%;
-}
-
-.beverageSub p {
-    margin-top: 20px;
-    width: 80%;
-}
-
-.beverageSub a {
-    margin-top: 20px;
-    width: fit-content;
-    font-family: 'tccc-unitytextmedium';
-}
-
-.beverageSub a:after {
-    background-color: white;
-}
-
-.brands {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: flex-end;
-    margin-left: 30%;
     
 }
 
-.brands img {
-    padding-left: 50px;
-    height: calc(200px + 5vh);
+/*--------------- SOCIAL RESPONSIBILITY ---------------*/
+
+#s-r {
+    background-image: url("../images/socialresponsibility.png");
+    height: fit-content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 15% 10vh 15%;
+    color: white;
+    margin-top: -10vh;
+    overflow: hidden;
 }
 
-.brands img:hover {
-    -moz-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    -o-transform: translateY(-10px);
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
+.s-r-t {
+    width: 70%;
+    right: 0;
+    float: right;
+    text-align: end;
+    line-height: 10vh;
+    margin-top: 45vh;
+}
+
+.s-r-t h5 {
+    margin-bottom: -3vh;
+}
+
+.s-r-b {
+    margin-top: 5vh;
+    float: left;
+    width: 60%;
+}
+
+.link2 a {
+    margin-top: 2vh;
+    width: fit-content;
 }
 
 @media (max-width: 980px) {
-    #beverage h1 {
-        font-size: 3em;
-        line-height: normal;
-        margin-bottom: 50px;
-    }
-    .beverageSub, .beverageSub p {
-        width:100%;
-        margin-top: 20px;
+    #s-r {
+        background-image: url("../images/s-r-m\(980px\).png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        overflow: hidden;
+        height: fit-content;
+        padding: 0 5% 10vh 5%;
+        margin-top: 0;
     }
 
-    .brands {
-        margin-top: 5vh;
+    .s-r-t {
+        width: 100%;
+        float: none;
+        margin-top: 20vh;
+        text-align: left;
+    }
+
+    .s-r-b {
+        width: 100%;
     }
 }
 
+
 /*--------------- SUSTAINABLE BUSINESS ---------------*/
+
+#sustainable {
+    padding: 10vh 15% 50px 15%;
+}
 
 #sustainable .link a {
     font-family: 'tccc-unitytextmedium';
@@ -480,27 +501,163 @@ h5 {
     }
 }
 
-/*--------------- SOCIAL RESPONSIBILITY ---------------*/
 
-#s-r {
-    background-image: url("../images/socialresponsibility.png");
-    height: calc(200px + 20vh);
+/*--------------- BEVERAGE ---------------*/
+#beverage {
+    background-image: url("../images/Wave\ -\ Red.png");
+    height: fit-content;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 20vh 10% 10px 10%;
+    padding: 20vh 15% 20vh 15%;
     color: white;
-    margin-top: -5vh;
-    overflow: hidden;
 }
 
-.s-r h2, .s-r h5 {
+#beverage h1 {
     float: right;
     text-align: end;
     line-height: 10vh;
-    background-color: grey;
 }
 
-.s-r h5 {
-    margin-top: 12vh;
-    margin-bottom: -50px;
+.beverageSub h4 {
+    margin-top: 20vh;
+}
+
+.beverageSub {
+    width: 80%;
+}
+
+.beverageSub p {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.beverageSub a {
+    margin-top: 20px;
+    width: fit-content;
+    font-family: 'tccc-unitytextmedium';
+}
+
+.beverageSub a:after {
+    background-color: white;
+}
+
+.brands {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-end;
+    margin-left: 30%;
+    
+}
+
+.brands img {
+    padding-left: 50px;
+    height: calc(200px + 5vh);
+}
+
+.brands img:hover {
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+@media (max-width: 980px) {
+    #beverage {
+        background-image: url("../images/wave-red-m\(980px\).png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        overflow: hidden;
+        height: fit-content;
+        padding: 20vh 5% 30vh 5%;
+        margin: 0;
+    }
+
+    #beverage h1 {
+        line-height: normal;
+        margin-bottom: 30px;
+        float: left;
+        text-align: left;
+    }
+
+    .beverageSub, .beverageSub p {
+        width:100%;
+        margin-top: 20px;
+    }
+
+    .brands {
+        margin-top: 5vh;
+    }
+}
+
+/*--------------------------- FOOTER ---------------------------*/
+#footer {
+    background-image: url("../images/Footer-Wave.png");
+    height: calc(300px+50vh);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0 15% 2vh 15%;
+    margin-top: -20vh;
+}
+
+#footer a {
+    color: black;
+    width: fit-content;
+    font-family: 'tccc-unitytextregular';
+    font-size: calc(12px + 0.1vw);
+}
+
+#footer p {
+    font-family: 'tccc-unitytextlight';
+    font-size: 0.5em;
+    margin-top: 2vh;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.f-logo-div, .social {
+    height: 6vh;
+}
+
+.f-logo-div:hover .f-logo, .social-1:hover .yt, .social-2:hover .linkedin, .social-3:hover .twitter, .social-4:hover .fb, .social-5:hover .ig {
+    display: none;
+}
+
+.f-logo-hover, .yt-hover, .linkedin-hover, .twitter-hover, .fb-hover, .ig-hover {
+    display: none;
+}   
+
+.f-logo-div:hover .f-logo-hover, .social-1:hover .yt-hover, .social-2:hover .linkedin-hover, .social-3:hover .twitter-hover, .social-4:hover .fb-hover, .social-5:hover .ig-hover {
+    display: block;
+}
+
+.social {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.social img, .footernav a {
+    margin-right: 20px;
+}
+
+.footernav {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 980px) {
+    .footernav {
+        font-size: 2vw;
+        line-height: 15px;
+    }
 }
