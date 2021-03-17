@@ -202,6 +202,7 @@ h5 {
 
 #menu__toggle {
     opacity: 0;
+    
   }
   
   #menu__toggle:checked ~ .menu__btn > span {
@@ -226,10 +227,9 @@ h5 {
   .menu__btn {
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 30px;
-  
     width: 26px;
     height: 26px;
   
@@ -259,6 +259,8 @@ h5 {
     top: 8px;
   }
   
+
+
   .menu__box {
     display: block;
     position: fixed;
@@ -320,10 +322,35 @@ h5 {
     min-height: 20px;
 }
 
+/*--------------- BLACK HAMBURGER MENU ---------------*/
 
+  .menu__btn-black > span,
+  .menu__btn-black > span::before,
+  .menu__btn-black > span::after {
+    display: block;
+    position: absolute;
+  
+    width: 100%;
+    height: 2px;
+  
+    background-color: black;
+  
+    transition-duration: .25s;
+  }
+  .menu__btn-black > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn-black > span::after {
+    content: '';
+    top: 8px;
+  }
+  
 @media (max-width:980px) {
     .menu {display: none;}
+    .navbar-stuck {display:none;}
     .hamburger-menu {display: block}
+
 }
 /*--------------- VIDEO ---------------*/
 
