@@ -1,0 +1,176 @@
+.videoBackground img {
+    position: absolute ;
+    bottom: 10vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#hero-brands {
+    margin-top: 1vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    text-align: center;
+    width: 70%;
+}
+
+.hero-title h3 {
+    margin-top: 5vh;
+    line-height: 5vh;
+}
+
+.infograph {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.infograph img:not(:first-child) {
+        margin-left: 5vw;
+}
+
+.infograph img {
+    max-height: 300px;
+    min-height: 150px;
+}
+
+.secondaryNav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondaryNav-child {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #C9C9C9;
+    width: 80%;
+
+}
+
+.secondaryNav a {
+    font-family: 'tccc-unitytextregular';
+    color: black;
+}
+
+.secondaryNav a:not(:first-child) {
+    margin-left: 3vw;
+}
+
+.menu2 li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.divButton {
+    position: relative;
+    height: fit-content;
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    background-color:#D22829;
+    border-radius: 30px;
+    height: 60px;
+    width: 250px;
+    font-size: 20px;
+    color: white;
+}
+
+.button:hover {
+    border: transparent;
+    filter: brightness(120%);
+}
+
+.button:focus {
+    outline: 0;
+}
+
+
+/*------------------ BRANDS ------------------*/
+#brands {
+    padding: 5vh 15% 5vh 15%;
+}
+
+.brands-title {
+    display: flex;
+}
+
+.brands-title img {
+    max-width: 36px;
+    max-height: 30px;
+    position: absolute;
+    left: 13.5vw;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.row div:not(:first-child) {
+    margin-left: 10vw;
+}
+
+.row p {
+    font-family: 'tccc-unitytextlight';
+    margin-top: 20px;
+}
+
+.brand-content {
+    width: 33%;
+    position: relative;
+}
+
+.brand-hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    animation: animate ease-in 300ms;
+}
+
+.brand-img:hover .brand-hover {
+    display: block;
+}
+
+@keyframes animate {
+    0% {
+      opacity: 0%;
+    }
+
+    100% {
+      opacity: 100%; 
+    }
+}
+
+.exploremore {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+/*------------------ FOOTER ------------------*/
+#footer {
+    margin-top: 100px;
+}
+
