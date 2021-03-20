@@ -15,7 +15,7 @@ body, html {
 
 h1 {
     font-family:'tccc-unityheadlinebold';
-    font-size: calc(40px + 0.5vw);
+    font-size: calc(40px + 2vw);
     line-height: 20px;
 }
 
@@ -38,6 +38,13 @@ h4 {
 h5 {
     font-family:'tccc-unitytextmedium';
     font-size: calc(15px + 0.2vw);
+    line-height: 1.5em;
+}
+
+p {
+    font-family: 'tccc-unitytextregular', sans-serif;
+    font-size: calc(15px + 0.2vw);
+    line-height: 1.5em;
 }
 
 .red {
@@ -353,7 +360,6 @@ h5 {
 
 }
 /*--------------- VIDEO ---------------*/
-
 .hero {
     height: 90vh;
 }
@@ -475,7 +481,7 @@ h5 {
 }
 
 .s-r-b {
-    margin-top: 5vh;
+    margin-top: 10vh;
     float: left;
     width: 60%;
 }
@@ -654,13 +660,14 @@ h5 {
 
 /*--------------------------- FOOTER ---------------------------*/
 #footer {
-    background-image: url("../images/Footer-Wave.png");
+    background-image: url("../images/Footer-Wave.svg");
     height: calc(300px+50vh);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     padding: 0 15% 2vh 15%;
     margin-top: -20vh;
+    filter: drop-shadow(0 0 3px #333)
 }
 
 #footer a {
