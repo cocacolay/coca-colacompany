@@ -129,7 +129,8 @@ $(document).ready(function () {
         // Animate the div element. A duration is set to 500 milliseconds.
         $('.more').animate({}, 500);
         $('.more').show(); 
-        $('.exploremore').hide();         // Also show the div element.
+        $('.exploremore').hide(); 
+        $('.exploreless').show();        // Also show the div element.
     });
 
     // REVERSE ANIMATE.

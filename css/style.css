@@ -386,10 +386,18 @@ p {
     .hero {height:40vh}
 }
 
+.videoBackground img {
+    position: absolute ;
+    bottom: 1vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
 /*--------------- OUR COMPANY ---------------*/
 
 #ourCompany {
-    padding: 10vh 15% 50px 15%;
+    padding: 3vh 15% 50px 15%;
 }
 
 #ourCompany a {
@@ -403,6 +411,10 @@ p {
     display: flex;
     margin-top: 5vh;
     justify-content: center;
+}
+
+.content .stat:not(:first-child) {
+    margin-left: 20px;
 }
 
 .stat {
@@ -421,6 +433,9 @@ p {
     max-height: 120px;
     min-width: 50px;
     min-height: 50px;
+}
+
+.stat-top img:not(:last-child) {
     margin-right: 20px;
 }
 
@@ -474,12 +489,7 @@ p {
     right: 0;
     float: right;
     text-align: end;
-    line-height: 10vh;
     margin-top: 45vh;
-}
-
-.s-r-t h5 {
-    margin-bottom: -3vh;
 }
 
 .s-r-b {
@@ -584,15 +594,18 @@ p {
 #beverage h1 {
     float: right;
     text-align: end;
-    line-height: 10vh;
+    font-size: calc(40px + 7vw);
+    line-height: 17vh;
+    padding-top: 5vh;
 }
 
 .beverageSub h4 {
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 
 .beverageSub {
-    width: 80%;
+    width: 70%;
+    margin-top: 40vh;
 }
 
 .beverageSub p {

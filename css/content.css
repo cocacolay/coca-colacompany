@@ -71,6 +71,8 @@ p {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
+
+
 /* ------- OUR PURPOSE ------ */
 .container-title {
     display: flex;
