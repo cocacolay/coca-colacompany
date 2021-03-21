@@ -7,7 +7,6 @@
 }
 
 #hero-brands {
-    margin-top: 1vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -20,8 +19,12 @@
     width: 70%;
 }
 
+.hero-title h1 {
+    font-size: calc(40px + 5vw);
+}
+
 .hero-title h3 {
-    margin-top: 5vh;
+    margin-top: 8vh;
     line-height: 5vh;
 }
 

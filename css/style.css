@@ -15,8 +15,9 @@ body, html {
 }
 
 h1 {
-    font-family:'tccc-unityheadlinebold';
-    font-size: calc(40px + 2vw);
+    font-family:'tccc-unitycondensedmedium';
+    font-size: calc(40px + 7vw);
+    text-shadow: 0 3px 4px rgb(0,0,0,0.25);
     line-height: 20px;
 }
 
@@ -668,7 +669,7 @@ p {
     overflow: hidden;
     padding: 0 15% 2vh 15%;
     margin-top: -20vh;
-    filter: drop-shadow(0 0 3px #333)
+    filter: drop-shadow(0 0 3px rgb(0,0,0,0.25));
 }
 
 #footer a {
