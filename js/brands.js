@@ -30,7 +30,9 @@ $(document).ready(function () {
         $('#juice').hide();
         $('#coffee').hide();
         $('#tea').hide();
-        $('.exploremore').hide();        
+        $('.exploremore').hide();     
+        $('.more').hide();
+        $('.exploreless').hide();   
     });
 });
 
@@ -45,7 +47,9 @@ $(document).ready(function () {
         $('#juice').hide();
         $('#coffee').hide();
         $('#tea').hide();
-        $('.exploremore').hide();     
+        $('.exploremore').hide();
+        $('.more').hide();
+        $('.exploreless').hide();        
     });
 });
 
@@ -60,7 +64,9 @@ $(document).ready(function () {
         $('#water').hide();
         $('#coffee').hide();
         $('#tea').hide();
-        $('.exploremore').hide();     
+        $('.exploremore').hide();
+        $('.more').hide();
+        $('.exploreless').hide();        
     });
 });
 
@@ -76,7 +82,9 @@ $(document).ready(function () {
         $('#water').hide();
         $('#juice').hide();
         $('#tea').hide();
-        $('.exploremore').hide();     
+        $('.exploremore').hide();
+        $('.more').hide();
+        $('.exploreless').hide();        
     });
 });
 
@@ -91,7 +99,9 @@ $(document).ready(function () {
         $('#water').hide();
         $('#juice').hide();
         $('#coffee').hide();
-        $('.exploremore').hide();     
+        $('.exploremore').hide();
+        $('.more').hide();
+        $('.exploreless').hide();        
     });
 });
 
@@ -107,7 +117,9 @@ $(document).ready(function () {
         $('#tea').hide();
         $('.viewall-container').hide();
         $('#brands').show();
-        $('.exploremore').show();        // HIDE THE DIV.
+        $('.exploremore').show();
+        $('.more').hide();
+        $('.exploreless').hide();           // HIDE THE DIV.
     });
 });
 
