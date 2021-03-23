@@ -1,6 +1,6 @@
 .videoBackground img {
     position: absolute ;
-    bottom: 10vh;
+    bottom: 2vh;
     width: 100%;
     overflow: hidden;
     z-index: -1;
@@ -12,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5vh;
 }
 
 .hero-title {
@@ -39,8 +40,20 @@
 }
 
 .infograph img {
-    max-height: 300px;
-    min-height: 150px;
+    width: 80%;
+}
+
+@media (max-width: 980px) {
+    .infograph {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+    }
+    .infograph img {
+        width: 80%;
+        margin: 0;
+    }
 }
 
 .secondaryNav {
@@ -115,7 +128,9 @@
     outline: 0;
 }
 
-
+@media (max-width: 980px) {
+    .secondaryNav {display:none}
+}
 /*------------------ BRANDS ------------------*/
 #brands, .more, #soda, #water, #juice, #coffee, #tea {
     padding: 5vh 15% 5vh 15%;
@@ -153,10 +168,23 @@
 
 .brands-title img {
     max-width: 36px;
-    max-height: 30px;
+    max-height: 36px;
     position: absolute;
     left: 13.5vw;
 }
+
+@media (min-width: 981px), (max-width: 1200px) {
+    .brands-title img {
+        left: 12vw;
+    }
+}
+
+@media (max-width: 980px) {
+    .brands-title img {
+        left: 8vw;
+    }
+}
+
 
 .row {
     display: flex;
@@ -189,10 +217,23 @@
     animation: animate ease-in 300ms;
 }
 
+.brand-img img {
+    width: 100%;
+}
+
 .brand-img:hover .brand-hover {
     display: block;
 }
 
+@media (max-width: 980px) {
+    #brands, .more, #soda, #water, #juice, #coffee, #tea {
+        padding: 3vh 5% 3vh 5%;
+    }
+
+    .brand-content p {
+        display: none;
+    }
+}
 
 .exploremore, .exploreless {
     display: flex;

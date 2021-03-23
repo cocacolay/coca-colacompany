@@ -5,10 +5,37 @@
     background-size: contain;
 }
 
+@media (max-width: 1200px) {
+    .C-hero {
+        height: calc(300px + 20vw);
+    }
+}
+
+@media (max-width: 980px) {
+    .C-hero {
+        background-image: url("../images/careers/Hero-mobile.png");
+        height: calc(300px + 60vw);
+        background-repeat: no-repeat;
+        background-size: contain;
+        overflow: hidden;}
+}
+
 .hero-container {
     padding: 5vh 15% 0 15%;
     text-align: center;
     display: flex;
+}
+
+.hero-subtitle:before {
+   content: url(../images/ourcompanyimages/OP-Bubbles.png);
+   position: absolute;
+   left: 10vw;
+}
+
+@media (min-width: 1200px) {
+    .hero-subtitle:before {
+        left: 14vw;
+    }
 }
 
 .hero-container img {
@@ -17,6 +44,13 @@
     min-width: 20px;
     min-height: 20px;
 }
+
+@media (max-width: 780px) {
+    .hero-subtitle {
+        margin-top: -15vh;
+    }
+}
+
 .c-title {
     width: 100%;
     height: 50%;
@@ -97,6 +131,11 @@ text-shadow: 0 0 4px 4 #3333;
     font-size: 0.8em;
 }
 
+@media (max-width: 980px) {
+    .linkedin-container, .glassdoor-container {
+        flex-direction: column;
+    }
+}
 
 .medium {
     font-family: 'tccc-unitytextmedium';
