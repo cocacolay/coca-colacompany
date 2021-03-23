@@ -11,43 +11,45 @@ p {
     margin-bottom: 20px;
 }
 
-.OC-hero {
-    background-image: url("../images/ourcompanyimages/Hero.png");
-    height: calc(300px + 26vw);
-    background-repeat: no-repeat;
-    background-size: contain;
-    overflow: hidden;
+@media (min-width: 1300px) {
+    .OC-hero {
+        background-image: url("../images/ourcompanyimages/Hero.png");
+        height: calc(400px + 25vw);
+        background-repeat: no-repeat;
+        background-size: contain;
+        overflow: hidden;
+}
 }
 
-.title {
+.oc-title {
     width: 100%;
-    height: 50%;
+    height: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.title h1 {
+.OC-hero h1 {
     color: white;
     text-shadow: 0 0 4px 4 #3333 ;
 }
+
 
 .secondaryNav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 1vh 0 5vh 0;
 }
 
 .secondaryNav-child {
-    margin-top: 5vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #C9C9C9;
     width: 80%;
-
 }
 
 .secondaryNav a {
@@ -72,6 +74,30 @@ p {
     transition: transform 0.25s ease-out;
 }
 
+.menu__box .secondary a {
+    font-family: 'tccc-unitytextlight';
+    text-align: start;
+    margin-left: 10px;
+}
+
+@media (max-width: 1299.99px) {
+    .OC-hero {
+        background-image: url("../images/ourcompanyimages/Hero.png");
+        height: calc(300px + 20vw);
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .secondaryNav {
+        margin-top: 5vh;
+    }
+}
+
+@media (max-width: 980px) {
+    .secondaryNav, .secondaryNav-child {
+        display: none}
+}
 
 /* ------- OUR PURPOSE ------ */
 .container-title {
