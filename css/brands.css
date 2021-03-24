@@ -29,6 +29,10 @@
     line-height: 5vh;
 }
 
+.brands-link {
+    border-bottom: 2px solid #D22829;
+}
+
 .infograph {
     display: flex;
     justify-content: center;

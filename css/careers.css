@@ -65,6 +65,10 @@ margin-top: 12vh;
 text-shadow: 0 0 4px 4 #3333;
 }
 
+.careers {
+    border-bottom: 2px solid #D22829;
+}
+
 .content-container {
     padding: 5vh 15% 5vh 15%;
 }

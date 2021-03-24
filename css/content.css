@@ -33,6 +33,9 @@ p {
     text-shadow: 0 0 4px 4 #3333 ;
 }
 
+.oc {
+    border-bottom: 2px solid white;
+}
 
 .secondaryNav {
     width: 100%;
