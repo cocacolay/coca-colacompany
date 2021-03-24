@@ -218,6 +218,7 @@
 }
 
 .brand-img img {
+    min-width: 50px;
     width: 100%;
 }
 
@@ -259,34 +260,6 @@
       opacity: 100%; 
     }
 }
-
-#myBtn {
-    display: none; /* Hidden by default */
-    position: fixed;
-    bottom: 50px; 
-    right: 50px; 
-    z-index: 99;
-    outline: none;
-    border: none;
-    cursor: pointer; 
-    border-radius: 50%; 
-    background-color: #939597;
-    opacity: 50%;
-    height: 80px;
-    width: 80px;
-  }
-
-  #myBtn:hover {
-    background-color: #D22829;
-    opacity: 1;
-    box-shadow: 1px 1px 5px 2 grey;
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-    transition: ease-in-out 0.2s;
-  }
 
 /*------------------ FOOTER ------------------*/
 #footer {
