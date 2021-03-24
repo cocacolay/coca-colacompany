@@ -63,6 +63,10 @@ p {
     margin-left: 3vw;
 }
 
+.overview {
+    border-bottom: 2px solid #D22829;
+}
+
 .menu2 li a:after {
     content: '';
     position: absolute;
